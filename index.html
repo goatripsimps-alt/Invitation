@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner Date Invitation 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Page 1: Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="hearts-background"></div>
+        <div class="content-wrapper">
+            <div class="cute-decorations">
+                <span class="cute-icon left">🐶</span>
+                <span class="cute-icon right">🐼</span>
+            </div>
+            <div class="photo-frame">
+                <img src="images/couple1.jpg" alt="Us" class="couple-photo">
+            </div>
+            <h1 class="main-title">Hii, Bubbbsss 💕</h1>
+            <p class="subtitle">You've got a special invitation... 🐶🐼</p>
+            <button class="cta-button" onclick="goToEnvelope()">Open Invitation ✨</button>
+        </div>
+    </div>
+
+    <!-- Page 2: Envelope Page -->
+    <div id="envelope-page" class="page">
+        <div class="hearts-background"></div>
+        <div class="content-wrapper">
+            <div class="envelope-container" id="envelope-container">
+                <div class="envelope" id="envelope" onclick="openEnvelope()">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body"></div>
+                    <div class="heart-seal">💕</div>
+                    <div class="envelope-decoration left">🐶</div>
+                    <div class="envelope-decoration right">🐼</div>
+                </div>
+                <div class="letter" id="letter">
+                    <div class="letter-content">
+                        <h2>Dinner Date Invitation 🌹🐶🐼</h2>
+                        <p class="invitation-text">
+                            My dearest Bubbbsss,
+                        </p>
+                        <p class="invitation-text">
+                            I would be absolutely delighted if you would join me for a romantic dinner date.
+                        </p>
+                        <div class="date-info">
+                            <p><strong>📅 Date:</strong> January 14, 2026</p>
+                            <p><strong>🕘 Time:</strong> 9:00 PM</p>
+                            <p><strong>📍 Location:</strong> It's a surprise! 🎁</p>
+                        </div>
+                        <p class="invitation-text">
+                            Will you go on this date with me?
+                        </p>
+                        <div class="button-container">
+                            <button class="yes-button" onclick="handleYes()">Yes! 💖</button>
+                            <button class="no-button" id="no-button" onclick="handleNo()">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: First No Response -->
+    <div id="first-no-page" class="page">
+        <div class="hearts-background"></div>
+        <div class="content-wrapper">
+            <div class="cute-decorations">
+                <span class="cute-icon left">🐶</span>
+                <span class="cute-icon right">🐼</span>
+            </div>
+            <div class="photo-frame">
+                <img src="images/childhood.jpg" alt="Childhood" class="childhood-photo">
+            </div>
+            <h2 class="plea-title">But... but... 🥺🐶</h2>
+            <p class="plea-text">Look at little me! How can you say no to this face? 🐼</p>
+            <p class="plea-text">Please, Bubbbsss? It would mean the world to me! 💕</p>
+            <div class="button-container">
+                <button class="yes-button" onclick="handleYes()">Okay, Yes! 💖</button>
+                <button class="no-button" onclick="handleSecondNo()">Still No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Second No Response -->
+    <div id="second-no-page" class="page">
+        <div class="hearts-background"></div>
+        <div class="content-wrapper">
+            <div class="cute-decorations">
+                <span class="cute-icon left">🐼</span>
+                <span class="cute-icon right">🐶</span>
+            </div>
+            <div class="photo-frame">
+                <img src="images/childhood.jpg" alt="Childhood" class="childhood-photo">
+            </div>
+            <h2 class="plea-title">Pretty please? 🥺👉👈🐶</h2>
+            <p class="plea-text">I promise it'll be the best date ever! 🐼💕</p>
+            <p class="plea-text">Just one chance, Bubbbsss? I'll make it so special for you! ✨</p>
+            <div class="button-container">
+                <button class="yes-button" onclick="handleYes()">Fine, Yes! 💖</button>
+                <button class="no-button" onclick="handleThirdNo()">No Again</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Third No Response (Final) -->
+    <div id="third-no-page" class="page">
+        <div class="hearts-background"></div>
+        <div class="content-wrapper">
+            <div class="special-note">
+                <h2 class="note-title">A Special Note for You 💌🐶🐼</h2>
+                <div class="note-content">
+                    <p>Ayyyeee Agggavvvv Bannndarrrr!!</p>
+                    <p>Please say yes naaa!!</p>
+                    <p>I want to have dinner with you 💕</p>
+                    <p>You are going this weekend, phir tu akele majja karengi</p>
+                    <p>Toh aaj mere sath chall please!! 🐶🐼</p>
+                    <p>Also maine joh kal kiya hai, i feel really bad for that</p>
+                    <p>Please forgive and Say Yes!!</p>
+                    <p>hehehe!! 😊💕</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="yes-button" onclick="handleYes()">Yes, I'll go! 💖</button>
+                <button class="no-button disabled" disabled>No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 6: Date Details -->
+    <div id="details-page" class="page">
+        <div class="hearts-background"></div>
+        <div class="content-wrapper">
+            <div class="celebration-container">
+                <h1 class="celebration-title">Yay! 🎉💕🐶🐼</h1>
+                <p class="celebration-text">I'm so excited! This is going to be amazing!</p>
+
+                <div class="details-card">
+                    <h2>Date Details 📋</h2>
+                    <div class="detail-item">
+                        <span class="detail-icon">📅</span>
+                        <div class="detail-info">
+                            <strong>Date</strong>
+                            <p>January 14, 2026 (Today!)</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">🕘</span>
+                        <div class="detail-info">
+                            <strong>Time</strong>
+                            <p>9:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <div class="detail-info">
+                            <strong>Location</strong>
+                            <p>It's a surprise! I'll pick you up 🎁</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">👗</span>
+                        <div class="detail-info">
+                            <strong>Dress Code</strong>
+                            <p>Wear something that makes you feel beautiful (you always do! 💕)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="cta-button" onclick="goToThankYou()">Continue ✨</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 7: Thank You Page -->
+    <div id="thankyou-page" class="page">
+        <div class="hearts-background"></div>
+        <div class="content-wrapper">
+            <div class="photo-gallery">
+                <img src="images/couple2.jpg" alt="Us" class="gallery-photo">
+                <img src="images/couple3.jpg" alt="Us" class="gallery-photo">
+            </div>
+            <h1 class="thankyou-title">Thank You, Bubbbsss! 💕🐶🐼</h1>
+            <p class="thankyou-text">I can't wait to see you tonight! 🐶</p>
+            <p class="thankyou-text">Get ready for an unforgettable evening together 🌹🐼</p>
+            <div class="countdown-container">
+                <p class="countdown-text">See you at the date! ✨</p>
+                <div class="hearts-animation">
+                    <span class="heart">💕</span>
+                    <span class="heart">💖</span>
+                    <span class="heart">💗</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
